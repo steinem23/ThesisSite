@@ -1,0 +1,8 @@
+CREATE TABLE valid_users {
+    id integer NOT NULL, 
+    user_name varchar(25) NOT NULL,
+    password varchar(25) NOT NULL,
+    CONSTRAINT PRIMARY KEY (id),
+    CONSTRAINT UNIQUE (user_name)
+
+}
