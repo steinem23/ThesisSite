@@ -70,8 +70,7 @@
 
 <h2> OWASP Top 10 </h2>
   <h3> 7. Cross-Site Scripting (XSS) </h3>
-    <p> Cross-site scripting is a type of injection where untrusted data is not validated allowing for remote code execution of the user’s browser. When directed to a new browser, the updated page will be filled with user-supplied data. An attacker can then hijack an account, redirect the browser, show fraudulent content, or deliver malware to the user which compromises the user-host relationship [2].</p>
-
+    <p> Cross-site scripting is a type of injection where untrusted data is not validated  allowing for remote code execution of the user's browser. Developers can protect their site with server-side validation and escaping. Developers must know how and when to apply the proper sanitization solutions.</p>
 </div>
 <hr>
 <!---->
@@ -160,19 +159,19 @@
 <button onclick="myAccFunc('Demo1')" class="w3-padding-16 w3-theme w3-button w3-block w3-left-align">Hint</button>
 <div id="Demo1" class="w3-hide">
   <div class="w3-container">
-    <p>Here is a hint on how XSS works.</p>
+    <p>Try using script  tags in your message!</p>
   </div>
 </div>
 <button onclick="myAccFunc('Demo2')" class="w3-padding-16 w3-theme w3-button w3-block w3-left-align"> More Information</button>
 <div id="Demo2" class="w3-hide">
   <a href="https://www.owasp.org/index.php/Top_10-2017_A7-Cross-Site_Scripting_(XSS)" class="w3-button w3-block w3-left-align">OWASP Top 10-2017: Cross-Site Scripting</a>
-  <a href="#" class="w3-button w3-block w3-left-align">Link 2 for more information about XSS</a>
+  <a href="https://www.w3.org/TR/charmod/#sec-Escaping" class="w3-button w3-block w3-left-align">Character Escaping</a>
   <a href="#" class="w3-button w3-block w3-left-align">Link 3 for more information about XSS</a>
 </div>
 <button onclick="myAccFunc('Demo3')" class="w3-padding-16 w3-theme w3-button w3-block w3-left-align">How to Protect Against this Vulnerability</button>
 <div id="Demo3" class="w3-hide">
   <div class="w3-container">
-    <p>Here are some important tips! </p>
+    <a href="https://www.owasp.org/index.php/XSS_(Cross_Site_Scripting)_Prevention_Cheat_Sheet" class="w3-button w3-block w3-left-align">XSS Prevention Cheat Sheet</a>
   </div>
 </div>
 
