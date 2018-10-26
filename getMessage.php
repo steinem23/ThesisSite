@@ -5,7 +5,7 @@
        die("Connection failed: " . mysqli_connect_error());
    }
 
-   $query =  "SELECT * FROM FORUM");
+   $query =  "SELECT * FROM message");
 
    $result = mysqli_query($con, $query);
 
