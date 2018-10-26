@@ -32,6 +32,7 @@
 
 <div class="w3-bar w3-theme" >
   <a href="Thesis.html" class="w3-bar-item w3-button w3-padding-16">Home</a>
+  <a href="Cert.html" class="w3-bar-item w3-button w3-padding-16">Get Certified</a>
   <a href="AboutMe.html" class="w3-bar-item w3-button w3-padding-16">About</a>
   
   <div class="w3-dropdown-hover">
@@ -45,7 +46,7 @@
     <a href="Injection.html" class="w3-bar-item w3-button">Injection</a>
       <a href="BrokenAuth.html" class="w3-bar-item w3-button">Broken Authentication</a>
       <a href="SensitiveDataExp.html" class="w3-bar-item w3-button">Sensitive Data Exposure</a>
-      <a href="XEE.html" class="w3-bar-item w3-button">XML External Entities (XEE)</a>
+      <a href="XEE.html" class="w3-bar-item w3-button">XML External Entities (XXE)</a>
       <a href="BrokenAccessCont.html" class="w3-bar-item w3-button">Broken Access Control</a>
       <a href="SecMisconfig.html" class="w3-bar-item w3-button">Security Misconfiguration</a>
       <a href="XSS.html" class="w3-bar-item w3-button">Cross-Site Scripting (XSS)</a>
@@ -81,20 +82,19 @@
 <!--Input Form-->
 <div class="w3-row-padding">
 <div class="w3-half">
-<form class="w3-container w3-card-4">
+<form action = "login.php" method="post" class="w3-container w3-card-4">
   <h2>Login</h2>
   <p> Try to gain access to an account.</p>
   <div class="w3-section">      
-    <input class="w3-input" type="text" required>
+    <input class="w3-input" type="text" name="username" required>
     <label>Username</label>
   </div>
   <div class="w3-section">      
-    <input class="w3-input" type="text" required>
+    <input class="w3-input" type="text" name="password" required>
     <label>Password</label>
   </div>
   <div>
     <button class="w3-btn w3-theme" type="submit">Login</button> <br>
-
     <hr>
 
   </div>
@@ -131,7 +131,7 @@
 </div>
 <button onclick="myAccFunc('Demo2')" class="w3-padding-16 w3-theme w3-button w3-block w3-left-align"> More Information</button>
 <div id="Demo2" class="w3-hide">
-  <a href="#" class="w3-button w3-block w3-left-align">Link 1 for more information about Injection</a>
+  <a href="https://www.owasp.org/index.php/Top_10-2017_A1-Injection" class="w3-button w3-block w3-left-align">OWASP Top 10-2017: Injection</a>
   <a href="#" class="w3-button w3-block w3-left-align">Link 2 for more information about Injection</a>
   <a href="#" class="w3-button w3-block w3-left-align">Link 3 for more information about Injection</a>
 </div>
