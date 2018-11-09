@@ -82,8 +82,8 @@
 <!--Input Form-->
 <div class="w3-row-padding">
 <div class="w3-half">
-<form class="w3-container w3-card-4">
-<h2>Login</h2>
+    <form class="w3-container w3-card-4">
+        <h2>Login</h2>
 <p> Try to gain access to an account.</p>
 <div class="w3-section">      
 <input class="w3-input" type="text" name="username" required>
@@ -94,7 +94,7 @@
 <label>Password</label>
 </div>
 <div>
-<button onclick = "document.getElementById('id01').style.display='block'" class="w3-btn w3-theme" >Login</button> <br>
+<button method = "GET" onclick = "document.getElementById('id01').style.display='block'" class="w3-btn w3-theme" >Login</button> <br>
 <hr>
 
 </div>
@@ -132,7 +132,29 @@
                </thead>
                
                <tbody> 
+                    <?php
+                        include("myCredentials.php");
+                        $con=mysqli_connect($servername, $username, $password, $dbname);
+                        if(!$con) {
+                            die("Connection failed: " . mysqli_connet_error());
+                        }
+                        $userName = $_GET['username'];
+                        $password = $_GET['password'];
 
+                        $query = "SELECT * FROM user WHERE uname= '" . $username . "' AND pw = '" . $password . "';";
+                        $result = mysql_query($con, $query);
+                       
+                        if(mysqli_num_rows($result)>0) {
+                         while($row = $result->fetch_array()) {
+                            echo "<tr>";
+                            echo "<td>" . $username . "</td>";
+                            echo "<td>" . $password . "</td>";
+                            echo "</tr>";
+                         }
+                        }
+                        else echo "<p>No user found.</p>";
+
+                    ?>
 
 
                    </tbody>
