@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <title>7. Cross-Site Scripting (XSS) </title>
@@ -126,30 +125,16 @@
    if(!$con) {
        die("Connection failed: " . mysqli_connect_error());
    }
-
-   $query =  "SELECT uname, message FROM message";
-
+   $query =  "SELECT * FROM message";
    $result = mysqli_query($con, $query);
-
-    echo "<table border = '1'>
-    <tr>
-        <th>User</th>
-        <th>Message</th>
-    </tr>";
-
-
-
-    while($row = mysqli_fetch_array($result)) {
-        echo "<tr>";
-        echo"<td>" . $row['uname'] . "</td>";
-        echo"<td>" . $row['message'] . "</td>";
-        echo "</tr>";
-
-    }
-
-    echo "</table>";
-    mysqli_close($con);
-
+    
+    
+    
+    
+    while($row = $result->fetch_array()) {
+    
+    }    
+mysqli_close($con);
    ?>
 
 
@@ -267,7 +252,6 @@
   background: #007bb5;
   color: white;
 }
-
 /* Add a hover effect if you want */
 .fa:hover {
     opacity: 0.7;
@@ -280,8 +264,6 @@
 
 <!-- Script for Accordions -->
 <script>
-
-
 // Accordions
 function myAccFunc(id) {
     var x = document.getElementById(id);
@@ -291,9 +273,8 @@ function myAccFunc(id) {
         x.className = x.className.replace(" w3-show", "");
     }
 }
-
-
 </script>
 
 </body>
 </html>
+
