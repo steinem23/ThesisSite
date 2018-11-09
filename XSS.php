@@ -20,7 +20,6 @@
   <div class="w3-center">
   <h4 class="w3-padding-large">INTRO TO APPLICATION SECURITY</h4>
   <h1 class="w3-xxlarge w3-animate-bottom">CROSS-SITE SCRIPTING (XSS)</h1>
-    </div>
   </div>
 </header>
 <!---->
@@ -82,7 +81,7 @@
         
 <div class="w3-row-padding">
 <div class="w3-half">
-    <form action = "postMessage.php" method="POST"class="w3-container w3-card-4">
+    <form action = "postMessage.php" method="POST" class="w3-container w3-card-4">
         <h2>Post a Mesage</h2>
             <p> Write a message to the board.</p>
     <div class="w3-section">      
@@ -104,6 +103,36 @@
 
 
 
+
+
+
+
+
+
+<div class="w3-half">
+    <form action = "getMessage.php" method="GET" class="w3-container w3-card-4">
+        <h2>Message Board</h2>
+            <p>See all messages here.</p>
+    
+    <div>
+        <button class="w3-btn w3-theme" type="submit">Refresh Board</button> <br>
+        <hr>
+    </div>
+    </form>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
 
 <div class="w3-half">
 <form class="w3-container w3-card-4">
@@ -139,7 +168,7 @@
         
 
 
-        while($row = $result-> fetch_array()) {
+        while($row = $result->fetch_array()) {
             echo "<tr class = w3-theme>";
             echo "<td>" . $row['uname'] . "</td>";
             echo "<td>" . $row['message'] . "</td>";
@@ -154,7 +183,7 @@
 </tbody>
 </table>
 </div>
-</div>
+</form>
 <br>
 
   <div>
@@ -180,14 +209,14 @@
 </div>
 <hr> 
         
-        
+    -->    
         
 
 <!---->
 
 
 
-<!--Post Messages-->
+<!--Post Messages
 <div class="w3-row-padding">
 <div class="w3-half">
 <form action = "getMessage.php" class="w3-container w3-card-4">
@@ -211,7 +240,7 @@
 </div>
 <hr>
 
-<!---->
+-->
 
 
 
