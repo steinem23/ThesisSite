@@ -86,15 +86,15 @@
         <h2>Login</h2>
 <p> Try to gain access to an account.</p>
 <div class="w3-section">      
-<input class="w3-input" type="text" name="username" required>
+<input class="w3-input" type="text" name="un" required>
 <label>Username</label>
 </div>
 <div class="w3-section">      
-<input class="w3-input" type="text" name="password" required>
+<input class="w3-input" type="text" name="pw" required>
 <label>Password</label>
 </div>
 <div>
-<button method = "GET" onclick = "document.getElementById('id01').style.display='block'" class="w3-btn w3-theme" >Login</button> <br>
+<button method = "POST" onclick = "document.getElementById('id01').style.display='block'" class="w3-btn w3-theme" >Login</button> <br>
 <hr>
 
 </div>
@@ -138,22 +138,24 @@
                         if(!$con) {
                             die("Connection failed: " . mysqli_connet_error());
                         }
-                        $userName = $_GET['username'];
-                        $password = $_GET['password'];
+                        $user = $_POST['un'];
+                        $pass = $_POST['pw'];
 
-                        $query = "SELECT * FROM user WHERE uname= '" . $username . "' AND pw = '" . $password . "';";
+                        $query = "SELECT * FROM user WHERE uname= '" . $user . "' AND pw = '" . $pass . "';";
                         $result = mysql_query($con, $query);
-                       
+                        
+                        echo $query;
+                         
                         if(mysqli_num_rows($result)>0) {
                          while($row = $result->fetch_array()) {
                             echo "<tr>";
-                            echo "<td>" . $username . "</td>";
+                            echo "<td>" . $user . "</td>";
                             echo "<td>" . $password . "</td>";
                             echo "</tr>";
                          }
                         }
                         else echo "<p>No user found.</p>";
-
+                        mysqli_close($con);
                     ?>
 
 
