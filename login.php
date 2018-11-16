@@ -4,20 +4,31 @@
    if(!$con) {
        die("Connection failed: " . mysqli_connect_error());
    }
-   $userName = $_POST['username'];
-   $password = $_POST['password'];
-
-
-    $query = "SELECT fname, lname, uname FROM user WHERE uname='" . $userName . "' AND pw = '" . $password . "';"; 
+   $name = $_GET['username'];
+   $pass = $_GET['password'];
+   
+   
+   $query = "SELECT fname, lname, uname FROM user WHERE uname='" . $name . "' AND pw = '" . $pass . "';"; 
    $result = mysqli_query($con, $query);
    
-   echo "<table border = '1'>
-   <tr>
-   <th> First Name</th>
-   <th> Last Name </th>
-   <th> Username </th>
-   </tr>";
-  
+ 
+    echo "
+        <div class='w3=half'>
+        <form class = 'w3-container w3-card-4'>
+        <h2>User Information</h2>
+        <div class='w3-container'>
+        <hr>
+        <div class='w3-responsive w3-card-4'>
+            <table class='w3-table w3-striped w3-bordered'>
+                <thead>
+                    <tr class='w3-theme'>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Username</th>
+                    </tr>
+                </thead>
+                <tbody>";
+ 
      
    if (mysqli_num_rows($result) >0) {
    
@@ -31,10 +42,22 @@
    }
 
    else {
-    echo "<p>No user found.</p>";
    }
-   echo "</table>";
+   echo "</tbody>
+         </table>
+         </div>";
+       
+    if(mysqli_num_rows($result) == 0) {
 
+       echo "<br>No User Found<br>";
+    }
+    echo "   
+         <hr>
+         <br>
+         </form>
+         </div>";
+    
+    
     //   ' or ''='
    // should result in an injection attack
     mysqli_close($con);
