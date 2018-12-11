@@ -46,29 +46,7 @@
 <!---->
 
 <!--Resources Accordion-->
-<div class="w3-container">
-<h2 class="w3-center">Resources</h2>
-<button onclick="myAccFunc('Demo1')" class="w3-padding-16 w3-theme w3-button w3-block w3-left-align">Hint</button>
-<div id="Demo1" class="w3-hide">
-  <div class="w3-container">
-    <p>Here is a hint on how Sensitive data exposure works.</p>
-  </div>
-</div>
-<button onclick="myAccFunc('Demo2')" class="w3-padding-16 w3-theme w3-button w3-block w3-left-align"> More Information</button>
-<div id="Demo2" class="w3-hide">
-  <a href="https://www.owasp.org/index.php/Top_10-2017_A3-Sensitive_Data_Exposure" class="w3-button w3-block w3-left-align">OWASP Top 10-2017: Sensitive Data Exposure</a>
-  <a href="#" class="w3-button w3-block w3-left-align">Link 2 for more information about Sensitive data exposure</a>
-  <a href="#" class="w3-button w3-block w3-left-align">Link 3 for more information about Sensitive data exposure</a>
-</div>
-<button onclick="myAccFunc('Demo3')" class="w3-padding-16 w3-theme w3-button w3-block w3-left-align">How to Protect Against this Vulnerability</button>
-<div id="Demo3" class="w3-hide">
-  <div class="w3-container">
-    <p>Here are some important tips! </p>
-  </div>
-</div>
-
-<hr>
-</div>
+<?php include '../SenDataExp/SDEResources.php';?>
 <!---->
 
 

@@ -46,7 +46,6 @@
   <h4>Instructions</h4>
   <p>Let's start by accessing information for one user. To access the information for a single account enter Username: steinem and Password: pw1234 and click Login. This will show you the information for a single user. </p> 
   <p> Now, type the following into the password field: ' or ''=' You may type anything or nothing into the username field. Click Login. We now see information for all users in the system. </p>
-    <p> We are able to see multiple users information because a special instruction is sent into the query. The instruction we sent in is not checked before being run and allows for a malicious attack to occur. </p>
 </div>
 <hr>
 <!---->
@@ -177,30 +176,7 @@
 
 
 <!--Resources Accordion-->
-<div class="w3-container">
-<h2 class="w3-center">Resources</h2>
-<button onclick="myAccFunc('Demo1')" class="w3-padding-16 w3-theme w3-button w3-block w3-left-align">Hint</button>
-<div id="Demo1" class="w3-hide">
-  <div class="w3-container">
-    <p>Here is a hint on how injection works.</p>
-  </div>
-</div>
-<button onclick="myAccFunc('Demo2')" class="w3-padding-16 w3-theme w3-button w3-block w3-left-align"> More Information</button>
-<div id="Demo2" class="w3-hide">
-  <a href="https://www.owasp.org/index.php/Top_10-2017_A1-Injection" class="w3-button w3-block w3-left-align">OWASP Top 10-2017: Injection</a>
-  <a href="#" class="w3-button w3-block w3-left-align">Link 2 for more information about Injection</a>
-  <a href="#" class="w3-button w3-block w3-left-align">Link 3 for more information about Injection</a>
-</div>
-<button onclick="myAccFunc('Demo3')" class="w3-padding-16 w3-theme w3-button w3-block w3-left-align">How to Protect Against this Vulnerability</button>
-<div id="Demo3" class="w3-hide">
-  <div class="w3-container">
-    <a href="https://www.owasp.org/index.php/Injection_Prevention_Cheat_Sheetp>Here are some important tips! </p>" class="w3-button w3-block w3-left-align">Injection Prevention Cheat Sheet</a>
-  </div>
-</div>
-
-<hr>
-</div>
-
+<?php include '../Injection/InjectionResources.php'; ?>
 <!---->
 
 

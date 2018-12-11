@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 
 <!DOCTYPE html>
 <html>
@@ -41,35 +44,40 @@
 <h2> OWASP Top 10 </h2>
   <h3> 2. Broken Authentication </h3>
     <p> Broken authentication occurs when authentication functions are incorrectly implemented. This allows an attacker access to sensitive information including usernames, passwords, keys, and session tokens [3]. Once this data has been compromised, an attacker may assume a user’s identity which can lead to money laundering, fraud, and disclosure of sensitive information.</p>
+    <p>If you see the lohout buttons below, first click on <b>Good Logout</b>.</p>
+    <p>Log into the site by entering steinem for the username and pw1234 for the password.</p>
+    <p>Log out of the site by clicking <b>Bad Logout</b>. This will indicate that you have logged out.</p>
+    <p>Now, refresh the page and you can see the log out hasn't been implemented correctly. The bad logout changed the appearance of the page but did not delete the session data which is maintained by the server when a user logs in. </p>
 
 </div>
 <hr>
 <!---->
 
-<!--Resources Accordion-->
-<div class="w3-container">
-<h2 class="w3-center">Resources</h2>
-<button onclick="myAccFunc('Demo1')" class="w3-padding-16 w3-theme w3-button w3-block w3-left-align">Hint</button>
-<div id="Demo1" class="w3-hide">
-  <div class="w3-container">
-    <p>Here is a hint on how broken authentication works.</p>
-  </div>
+
+<!--Include Ajax code-->
+<?php include '../BrokenAuth/ajaxCode.php';?>
+<!---->
+
+
+
+<!--Login-->
+<div id="login" class="w3-row-padding">
+    <div class="w3-half">
+    <?php include '../BrokenAuth/displayButtons.php';?>
+    </div>
 </div>
-<button onclick="myAccFunc('Demo2')" class="w3-padding-16 w3-theme w3-button w3-block w3-left-align"> More Information</button>
-<div id="Demo2" class="w3-hide">
-  <a href="https://www.owasp.org/index.php/Top_10-2017_A2-Broken_Authenticationttps://www.owasp.org/index.php/Top_10-2017_A1-Injection//www.owasp.org/index.php/Top_10-2017_A5-Broken_Access_Control" class="w3-button w3-block w3-left-align">OWASP Top 10-2017: Broken Authentication</a>
-  <a href="#" class="w3-button w3-block w3-left-align">Link 2 for more information about broken authentication</a>
-  <a href="#" class="w3-button w3-block w3-left-align">Link 3 for more information about broken authentication</a>
-</div>
-<button onclick="myAccFunc('Demo3')" class="w3-padding-16 w3-theme w3-button w3-block w3-left-align">How to Protect Against this Vulnerability</button>
-<div id="Demo3" class="w3-hide">
-  <div class="w3-container">
-    <p>Here are some important tips! </p>
-  </div>
+<!---->
+
+<!--UserInfo-->
+<div id="toReplace" class="w3-half">
+<?php include '../BrokenAuth/profile.php';?>
 </div>
 
-<hr>
-</div>
+<!---->
+
+
+<!--Resources Accordion-->
+<?php include '../BrokenAuth/BrokenAuthResources.php';?>
 <!---->
 
 

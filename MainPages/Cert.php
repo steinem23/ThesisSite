@@ -1,7 +1,7 @@
 
 <!DOCTYPE html>
 <html>
-<title>5. Broken Access Control</title>
+<title>My Thesis</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -18,8 +18,8 @@
 <!-- Header -->
 <header class="w3-container w3-theme w3-padding-large" id="myHeader"> 
   <div class="w3-center">
-  <h4 class="w3-padding-large">INTRO TO APPLICATION SECURITY</h4>
-  <h1 class="w3-xxlarge w3-animate-bottom">BROKEN ACCESS CONTROL</h1>
+  <h4 class="w3-padding-large">A WORKING TITLE:</h4>
+  <h1 class="w3-xxxlarge w3-animate-bottom">CERTIFICATIONS</h1>
     </div>
   </div>
 </header>
@@ -38,9 +38,10 @@
 
 <div class="w3-container">
 
-<h2> OWASP Top 10 </h2>
-  <h3> 5. Broken Access Control </h3>
-    <p> Broken access control is exploited when an attacker can access functions they are unauthorized to access. This occurs when authentications and restrictions are not properly enforced [3]. An attacker can gain access to restricted files or directories as well as create, update, and delete records [2].</p>
+<h2> Interested in Getting a Certification? </h2>
+
+  <p> Here are some certifications you can get.
+  </body>
 
 </div>
 <hr>
@@ -51,20 +52,10 @@
 
 
 
-
-
-<!--Resources Accordion-->
-<?php include '../BrokenAcc/BrokenAccResources.php';?>
-<!---->
-
-
-
-
-
-
 <!-- Footer -->
 <?php include '../scripts/Footer.php';?>
 <!---->
+
 
 <!--Styles-->
 <style>
@@ -87,23 +78,6 @@
 </style>
 <!---->
 
-
-<!-- Script for Accordions -->
-<script>
-
-
-// Accordions
-function myAccFunc(id) {
-    var x = document.getElementById(id);
-    if (x.className.indexOf("w3-show") == -1) {
-        x.className += " w3-show";
-    } else { 
-        x.className = x.className.replace(" w3-show", "");
-    }
-}
-
-
-</script>
 
 </body>
 </html>

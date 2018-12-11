@@ -1,9 +1,9 @@
 <?php
 echo <<<END
 <div class="w3-bar w3-theme" >
-  <a href="Thesis.html" class="w3-bar-item w3-button w3-padding-16">Home</a>
-  <a href="Cert.html" class="w3-bar-item w3-button w3-padding-16">Get Certified</a>
-  <a href="AboutMe.html" class="w3-bar-item w3-button w3-padding-16">About</a>
+  <a href="Thesis.php" class="w3-bar-item w3-button w3-padding-16">Home</a>
+  <a href="Cert.php" class="w3-bar-item w3-button w3-padding-16">Get Certified</a>
+  <a href="AboutMe.php" class="w3-bar-item w3-button w3-padding-16">About</a>
 
   <div class="w3-dropdown-hover">
     <button class="w3-button w3-padding-16">
