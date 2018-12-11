@@ -72,18 +72,79 @@
 <h2> OWASP Top 10 </h2>
   <h3> 1. Injection </h3>
   <p> An injection attack sends corrupt data to the interpreter to be executed . This occurs when data is sent from an untrusted source and then used to construct a query or command [2]. By tricking the interpreter into executing malicious commands, an attacker may gain access to sensitive data and database resources. This is done without proper authorization under the specified user [3]. Injection attacks can lead to data loss or corruption. </p>
-
+  <br>
+  <h4>Instructions</h4>
+  <p>Let's start by accessing information for one user. To access the information for a single account enter Username: steinem and Password: pw1234 and click Login. This will show you the information for a single user. </p> 
+  <p> Now, type the following into the password field: ' or ''=' You may type anything or nothing into the username field. Click Login. We now see information for all users in the system. </p>
+    <p> We are able to see multiple users information because a special instruction is sent into the query. The instruction we sent in is not checked before being run and allows for a malicious attack to occur. </p>
 </div>
 <hr>
 <!---->
 
 
 
-<!--Input Form-->
+
+<!--LOGIN-->
+
+<div id = "login"  class="w3-row-padding">
+<div class="w3-half">
+<form action = "login.php" class="w3-container w3-card-4">
+  <h2>Login</h2>
+  <p> Try to gain access to an account.</p>
+  <div class="w3-section">      
+    <input class="w3-input" type="text" id="username" required>
+    <label>Username</label>
+  </div>
+  <div class="w3-section">      
+    <input class="w3-input" type="text" id="password" required>
+    <label>Password</label>
+  </div>
+  <div>
+    <button class="w3-btn w3-theme" type="button" onclick = "getUser()">Login</button> <br>
+    <hr>
+
+  </div>
+ </form>
+ </div>
+ 
+<!---->
+
+
+<!--USER INFORMATION-->
+
+<div id = "toReplace" class="w3-half">
+    <form class = "w3-container w3-card-4">
+    <h2>User Information</h2>
+        <p>See user info here.</p>
+        
+    <div class="w3-container">
+    <hr>
+    <div class = "w3-responsive w3-card-4">
+        <table class= "w3-table w3-striped w3-bordered">
+            <thead>
+                <tr class="w3-theme">
+                 <th>First Name</th>
+                 <th>Last Name </th>
+                 <th> Username</th>
+                 </tr>
+             </thead>
+             <tbody>
+                <tr>
+                <td></td>
+                </tr>             
+             </tbody>
+         </table>
+     </div>
+  <hr>
+  <br>
+  </form>
+  </div>
+  </div> 
+<!---->
 
 
 
-
+<!--REPLACE USER INFORMATION -->
 
       <script>
          <!--
@@ -137,64 +198,9 @@
 
 
 
-
-
-
-
-
-
-
-
-<div id = "login"  class="w3-row-padding">
-<div class="w3-half">
-<form action = "login.php" class="w3-container w3-card-4">
-  <h2>Login</h2>
-  <p> Try to gain access to an account.</p>
-  <div class="w3-section">      
-    <input class="w3-input" type="text" id="username" required>
-    <label>Username</label>
-  </div>
-  <div class="w3-section">      
-    <input class="w3-input" type="text" id="password" required>
-    <label>Password</label>
-  </div>
-  <div>
-    <button class="w3-btn w3-theme" type="button" onclick = "getUser()">Login</button> <br>
-    <hr>
-
-  </div>
- </form>
- </div>
- 
-
-
-<div id = "toReplace" class="w3-half">
-    <form class = "w3-container w3-card-4">
-    <h2>User Information</h2>
-        <p>See user info here.</p>
-        
-    <div class="w3-container">
-    <hr>
-    <div class = "w3-responsive w3-card-4">
-        <table class= "w3-table w3-striped w3-bordered">
-            <thead>
-                <tr class="w3-theme">
-                 <th>First Name</th>
-                 <th>Last Name </th>
-                 <th> Username</th>
-                 </tr>
-             </thead>
-             <tbody>
-             
-             </tbody>
-         </table>
-     </div>
-  <hr>
-  <br>
-  </form>
-  </div>
-  </div> 
 <!---->
+
+
 
 
 
