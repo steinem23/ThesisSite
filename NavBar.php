@@ -13,7 +13,7 @@ echo <<<END
 
 
     <div class="w3-dropdown-content w3-card-4 w3-bar-block">
-    <a href="Injection.html" class="w3-bar-item w3-button">Injection</a>
+    <a href="Injection.php" class="w3-bar-item w3-button">Injection</a>
       <a href="BrokenAuth.php" class="w3-bar-item w3-button">Broken Authentication</a>
       <a href="SensitiveDataExp.html" class="w3-bar-item w3-button">Sensitive Data Exposure</a>
       <a href="XEEInjection.php" class="w3-bar-item w3-button">XML External Entities (XXE)</a>
