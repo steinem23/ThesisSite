@@ -13,16 +13,16 @@ echo <<<END
 
 
     <div class="w3-dropdown-content w3-card-4 w3-bar-block">
-    <a href="Injection.php" class="w3-bar-item w3-button">Injection</a>
-      <a href="BrokenAuth.php" class="w3-bar-item w3-button">Broken Authentication</a>
-      <a href="SensitiveDataExp.html" class="w3-bar-item w3-button">Sensitive Data Exposure</a>
-      <a href="XEEInjection.php" class="w3-bar-item w3-button">XML External Entities (XXE)</a>
-      <a href="BrokenAccessCont.html" class="w3-bar-item w3-button">Broken Access Control</a>
-      <a href="SecMisconfig.html" class="w3-bar-item w3-button">Security Misconfiguration</a>
-      <a href="XSS.php" class="w3-bar-item w3-button">Cross-Site Scripting (XSS)</a>
-      <a href="InsecureDeserialization.php" class="w3-bar-item w3-button">Insecure Desserialization</a>
-      <a href="UsingBadComponents.html" class="w3-bar-item w3-button">Using Components With Known Vulnerabilities</a>
-      <a href="InsuffLog&Monitor.html" class="w3-bar-item w3-button">Insufficient Logging and Monitoring </a>
+    <a href="Injection/Injection.php" class="w3-bar-item w3-button">Injection</a>
+      <a href="BrokenAuth/BrokenAuth.php" class="w3-bar-item w3-button">Broken Authentication</a>
+      <a href="SenDataExp/SensitiveDataExp.php" class="w3-bar-item w3-button">Sensitive Data Exposure</a>
+      <a href="XXE/XXE.php" class="w3-bar-item w3-button">XML External Entities (XXE)</a>
+      <a href="BrokenAcc/BrokenAccessCont.php" class="w3-bar-item w3-button">Broken Access Control</a>
+      <a href="SecMiscon/SecMisconfig.php" class="w3-bar-item w3-button">Security Misconfiguration</a>
+      <a href="XSS/XSS.php" class="w3-bar-item w3-button">Cross-Site Scripting (XSS)</a>
+      <a href="InsDes/InsecureDeserialization.php" class="w3-bar-item w3-button">Insecure Desserialization</a>
+      <a href="BadComponents/UsingBadComponents.php" class="w3-bar-item w3-button">Using Components With Known Vulnerabilities</a>
+      <a href="InsuffLogMon/InsuffLogMon.php" class="w3-bar-item w3-button">Insufficient Logging and Monitoring </a>
     </div>
   </div>
 
