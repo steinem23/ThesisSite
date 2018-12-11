@@ -28,7 +28,7 @@ V<header class="w3-container w3-theme w3-padding-large" id="myHeader">
 
 
 <!-- Navigation Bar -->
-<?php include '../NavBar.php'; ?>
+<?php include '../scripts/NavBar.php'; ?>
 <!---->
 
 
@@ -76,7 +76,7 @@ V<header class="w3-container w3-theme w3-padding-large" id="myHeader">
 
 
 <!-- Footer -->
-<?php include '../Footer.php';?>
+<?php include '../scripts/Footer.php';?>
 <!---->
 
 
